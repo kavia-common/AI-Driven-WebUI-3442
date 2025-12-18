@@ -22,8 +22,9 @@ defineEmits<{
 <template>
   <div v-if="isOpen" class="dialog-overlay" :data-testid="qa('confirmation-dialog-overlay')">
     <div class="dialog-content" :data-testid="qa('confirmation-dialog-content')">
-      <h3 class="dialog-title" :data-testid="qa('confirmation-dialog-title')">{{ title }}</h3>
-      <p class="dialog-message" :data-testid="qa('confirmation-dialog-message')">{{ message }}</p>
+      <!-- Typography: dialog title/body aligned to global tokens -->
+      <h3 class="dialog-title heading-4" :data-testid="qa('confirmation-dialog-title')">{{ title }}</h3>
+      <p class="dialog-message body" :data-testid="qa('confirmation-dialog-message')">{{ message }}</p>
       <div class="dialog-buttons" :data-testid="qa('confirmation-dialog-buttons')">
         <button class="btn btn-secondary" :data-testid="qa('confirmation-dialog-cancel-button')" @click="$emit('cancel')">
           {{ cancelText || t('common.no') }}
@@ -61,7 +62,6 @@ defineEmits<{
 
 .dialog-title {
   margin: 0 0 1rem 0;
-  font-size: 1.2rem;
   color: var(--text-primary);
 }
 

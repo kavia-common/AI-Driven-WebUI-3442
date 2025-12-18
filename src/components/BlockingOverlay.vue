@@ -65,10 +65,11 @@ onUnmounted(() => {
   <div v-if="isVisible" class="blocking-overlay" :data-testid="qa('blocking-overlay')">
     <div class="blocking-content" :data-testid="qa('blocking-overlay-content')">
       <div class="spinner" :data-testid="qa('blocking-overlay-spinner')"></div>
-      <h2 :data-testid="qa('blocking-overlay-title')">{{ message || 'Applying WiFi Settings...' }}</h2>
-      <p :data-testid="qa('blocking-overlay-description-1')">Please wait while the WiFi configuration is being applied.</p>
-      <p :data-testid="qa('blocking-overlay-description-2')">This process may take up to 30 seconds.</p>
-      <div class="countdown" :data-testid="qa('blocking-overlay-countdown')">{{ countdown }}s</div>
+      <!-- Typography: overlay uses token heading/body/caption for consistency -->
+      <h2 class="heading-3" :data-testid="qa('blocking-overlay-title')">{{ message || 'Applying WiFi Settings...' }}</h2>
+      <p class="body" :data-testid="qa('blocking-overlay-description-1')">Please wait while the WiFi configuration is being applied.</p>
+      <p class="body" :data-testid="qa('blocking-overlay-description-2')">This process may take up to 30 seconds.</p>
+      <div class="countdown heading-1" :data-testid="qa('blocking-overlay-countdown')">{{ countdown }}s</div>
       <div class="progress-bar" :data-testid="qa('blocking-overlay-progress-bar')">
         <div 
           class="progress-fill" 
@@ -117,18 +118,15 @@ onUnmounted(() => {
 h2 {
   margin: 0 0 1rem 0;
   color: var(--text-primary);
-  font-size: 1.5rem;
 }
 
 p {
   margin: 0.5rem 0;
   color: var(--text-secondary);
-  line-height: 1.5;
+  /* line-height handled by token utility classes */
 }
 
 .countdown {
-  font-size: 3rem;
-  font-weight: bold;
   color: var(--primary-color);
   margin: 2rem 0 1rem 0;
 }

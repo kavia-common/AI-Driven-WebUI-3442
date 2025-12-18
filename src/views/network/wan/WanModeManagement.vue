@@ -147,7 +147,8 @@ onMounted(fetchManagementData);
     <template v-else>
       <div v-if="!isEditing && !viewingMode" class="management-list" :data-testid="qa('wan-mode-management-list')">
         <div class="header-row">
-          <div class="section-title-sp" :data-testid="qa('wan-mode-management-title')">{{ t('wanSetup.modeManagement') }}</div>
+          <!-- Typography: section heading aligned to Backup WAN section title scale -->
+          <div class="section-title-sp section-title-text" :data-testid="qa('wan-mode-management-title')">{{ t('wanSetup.modeManagement') }}</div>
           <button class="btn btn-primary" :data-testid="qa('wan-mode-management-add-button')" @click="handleAdd">
             <span class="material-icons">add</span>
             {{ t('wanManagement.addMode') }}
@@ -267,7 +268,6 @@ onMounted(fetchManagementData);
 
 <style scoped>
 .section-title-sp {
-  font-size: 1rem;
   color: var(--text-primary);
   padding: 0.5rem 0;
 }

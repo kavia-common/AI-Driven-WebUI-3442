@@ -445,12 +445,12 @@ onMounted(() => {
     <button class="mobile-menu-toggle" :data-testid="qa('mobile-menu-toggle')" @click="toggleMobileMenu">
       <span class="material-icons" :data-testid="qa('mobile-menu-icon')">{{ isMobileMenuOpen ? 'close' : 'menu' }}</span>
     </button>
-    <span class="mobile-logo" :data-testid="qa('mobile-logo')">Gemtek</span>
+    <span class="mobile-logo heading-4" :data-testid="qa('mobile-logo')">Gemtek</span>
   </div>
 
   <aside class="sidebar" :data-testid="qa('sidebar')" :class="{ 'mobile-open': isMobileMenuOpen }">
     <div class="logo desktop-only" :data-testid="qa('sidebar-logo')">
-      <span class="logo-text" :data-testid="qa('sidebar-logo-text')">Gemtek</span>
+      <span class="logo-text heading-4" :data-testid="qa('sidebar-logo-text')">Gemtek</span>
     </div>
     <nav class="menu" :data-testid="qa('sidebar-menu')">
       <div
@@ -529,8 +529,6 @@ onMounted(() => {
 }
 
 .mobile-logo {
-  font-size: 1.25rem;
-  font-weight: bold;
   margin-left: 1rem;
   color: white;
 }
@@ -559,8 +557,6 @@ onMounted(() => {
 
 .logo-text {
   color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: bold;
 }
 
 .menu {

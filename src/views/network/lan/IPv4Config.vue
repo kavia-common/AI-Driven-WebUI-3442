@@ -295,7 +295,8 @@ onMounted(fetchLanBasic);
     <template v-else-if="lanData">
       <!-- LAN IP Setting -->
       <div class="panel-section" :data-testid="qa('ipv4-configuration-lan-ip-section')">
-        <div class="section-title" :data-testid="qa('ipv4-configuration-lan-ip-title')">{{ t('lanBasic.lanIpSetting') }}</div>
+        <!-- Typography: section heading aligned to Backup WAN section title scale -->
+        <div class="section-title section-title-text" :data-testid="qa('ipv4-configuration-lan-ip-title')">{{ t('lanBasic.lanIpSetting') }}</div>
         <div class="card-content" :data-testid="qa('ipv4-configuration-lan-ip-content')">
           <div class="form-group">
             <div class="switch-label">
@@ -340,7 +341,8 @@ onMounted(fetchLanBasic);
 
       <!-- DHCPv4 Setting -->
       <div class="panel-section" :data-testid="qa('ipv4-configuration-dhcp-section')">
-        <div class="section-title" :data-testid="qa('ipv4-configuration-dhcp-title')">{{ t('lanBasic.dhcpv4Setting') }}</div>
+        <!-- Typography: section heading aligned to Backup WAN section title scale -->
+        <div class="section-title section-title-text" :data-testid="qa('ipv4-configuration-dhcp-title')">{{ t('lanBasic.dhcpv4Setting') }}</div>
         <div class="card-content" :data-testid="qa('ipv4-configuration-dhcp-content')">
           <div class="form-group">
             <div class="switch-label">
@@ -425,7 +427,8 @@ onMounted(fetchLanBasic);
       <!-- IP Address Reservation -->
       <div class="panel-section" :data-testid="qa('ipv4-configuration-reservation-section')">
         <div class="header-row">
-          <div class="section-title-sp" :data-testid="qa('ipv4-configuration-reservation-title')">{{ t('lanBasic.ipAddressReservation') }}</div>
+          <!-- Typography: section heading aligned to Backup WAN section title scale -->
+          <div class="section-title-sp section-title-text" :data-testid="qa('ipv4-configuration-reservation-title')">{{ t('lanBasic.ipAddressReservation') }}</div>
           <button class="btn btn-primary" :data-testid="qa('ipv4-configuration-reservation-add-button')" @click="handleAddReservation">
             <span class="material-icons">add</span>
             {{ t('lanBasic.add') }}
@@ -613,14 +616,12 @@ onMounted(fetchLanBasic);
 
 .section-title {
   padding: 1rem 1.5rem;
-  font-size: 1rem;
   color: var(--text-primary);
   background-color: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
 }
 
 .section-title-sp {
-  font-size: 1rem;
   color: var(--text-primary);
   padding: 0.5rem 0;
 }
@@ -658,7 +659,8 @@ input {
   padding: 0.5rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body);
 }
 
 input:disabled {

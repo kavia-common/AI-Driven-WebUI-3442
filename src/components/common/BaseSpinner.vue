@@ -117,7 +117,8 @@ const textClasses = computed(() => {
 }
 
 .spinner-text {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body);
   font-weight: var(--font-weight-medium);
   margin: 0;
 }

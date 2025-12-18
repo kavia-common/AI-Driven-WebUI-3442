@@ -2,7 +2,8 @@
   <div class="qos-rule-tab">
     <BaseCard>
       <div class="rule-header">
-        <h3>{{ t('qos.qosRuleLists') }}</h3>
+        <!-- Typography: card/section header aligned to token heading scale -->
+        <h3 class="heading-4">{{ t('qos.qosRuleLists') }}</h3>
         <BaseButton @click="openAddModal" variant="primary">
           {{ t('qos.addRule') }}
         </BaseButton>
@@ -74,7 +75,7 @@
     >
       <div class="modal-form">
         <div class="form-group">
-          <label class="form-label">{{ t('qos.type') }}</label>
+          <label class="form-label label">{{ t('qos.type') }}</label>
           <BaseSelect
             v-model="currentRule.Type"
             :options="typeOptions"
@@ -84,7 +85,7 @@
 
         <template v-if="currentRule.Type === 'Device'">
           <div class="form-group">
-            <label class="form-label">{{ t('qos.device') }}</label>
+            <label class="form-label label">{{ t('qos.device') }}</label>
             <BaseSelect
               v-model="selectedDevice"
               :options="deviceOptions"
@@ -93,7 +94,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">{{ t('qos.macAddress') }}</label>
+            <label class="form-label label">{{ t('qos.macAddress') }}</label>
             <BaseInput
               v-model="currentRule.MACAddress"
               :disabled="true"
@@ -103,7 +104,7 @@
 
         <template v-if="currentRule.Type === 'Application'">
           <div class="form-group">
-            <label class="form-label">{{ t('qos.applicationType') }}</label>
+            <label class="form-label label">{{ t('qos.applicationType') }}</label>
             <BaseSelect
               v-model="selectedApplicationType"
               :options="applicationTypeOptions"
@@ -112,7 +113,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">{{ t('qos.applicationName') }}</label>
+            <label class="form-label label">{{ t('qos.applicationName') }}</label>
             <BaseInput
               v-model="currentRule.ApplicationName"
               :disabled="selectedApplicationType !== 'Self-defined'"
@@ -120,19 +121,19 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">{{ t('qos.port') }}</label>
+            <label class="form-label label">{{ t('qos.port') }}</label>
             <BaseInput
               v-model="currentRule.Port"
               :disabled="selectedApplicationType !== 'Self-defined'"
               :placeholder="t('qos.portPlaceholder')"
             />
-            <div class="field-hint">
+            <div class="field-hint caption">
               {{ t('qos.portHint') }}
             </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label">{{ t('qos.protocol') }}</label>
+            <label class="form-label label">{{ t('qos.protocol') }}</label>
             <BaseSelect
               v-model="currentRule.Protocol"
               :options="protocolOptions"
@@ -142,7 +143,7 @@
         </template>
 
         <div class="form-group">
-          <label class="form-label">{{ t('qos.priority') }}</label>
+          <label class="form-label label">{{ t('qos.priority') }}</label>
           <BaseSelect
             v-model="currentRule.Priority"
             :options="priorityOptions"
@@ -537,8 +538,6 @@ onMounted(() => {
 
 .rule-header h3 {
   margin: 0;
-  font-size: 18px;
-  font-weight: 600;
   color: var(--text-primary, #1f2937);
 }
 
@@ -590,13 +589,11 @@ onMounted(() => {
 }
 
 .form-label {
-  font-weight: 500;
   color: var(--text-primary, #1f2937);
 }
 
+/* Typography handled by .caption token utility */
 .field-hint {
-  font-size: 12px;
-  color: var(--text-secondary, #6b7280);
   margin-top: 4px;
 }
 

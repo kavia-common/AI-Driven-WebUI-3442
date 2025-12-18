@@ -131,7 +131,8 @@ select {
   padding: 0.5rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body);
 }
 
 select:disabled {

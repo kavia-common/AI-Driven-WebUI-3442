@@ -99,7 +99,7 @@ onMounted(() => {
       <div class="language-select-container" :data-testid="qa('header-language-container')">
         <span class="material-icons" :data-testid="qa('header-language-icon')">language</span>
         <select 
-          class="language-select" 
+          class="language-select body-sm" 
           :data-testid="qa('header-language-select')"
           :value="locale" 
           @change="handleLanguageChange"
@@ -109,11 +109,11 @@ onMounted(() => {
           </option>
         </select>
       </div>
-      <button class="header-btn" :data-testid="qa('header-account-button')">
+      <button class="header-btn button-text" :data-testid="qa('header-account-button')">
         <span class="material-icons" :data-testid="qa('header-account-icon')">person</span>
         {{ username }}
       </button>
-      <button class="header-btn" :data-testid="qa('header-logout-button')" @click="handleLogout">
+      <button class="header-btn button-text" :data-testid="qa('header-logout-button')" @click="handleLogout">
         <span class="material-icons" :data-testid="qa('header-logout-icon')">logout</span>
         {{ t('header.logout') }}
       </button>
@@ -171,8 +171,8 @@ onMounted(() => {
   background-color: #f5f5f5;
 }
 
+/* Typography: rely on global icon sizing; avoid ad-hoc font-size */
 .material-icons {
-  font-size: 20px;
 }
 
 @media (max-width: 768px) {

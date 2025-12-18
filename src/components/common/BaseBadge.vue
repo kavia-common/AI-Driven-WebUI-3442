@@ -31,7 +31,8 @@ const badgeClasses = computed(() => {
 
 <style scoped>
 .badge-sm {
-  font-size: 0.625rem;
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
   padding: 0.125rem var(--space-2);
 }
 </style>

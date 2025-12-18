@@ -5,7 +5,8 @@
         <div :class="modalClasses" @click.stop>
           <div v-if="$slots.header || title" class="modal-header">
             <slot name="header">
-              <h3 class="modal-title">{{ title }}</h3>
+              <!-- Typography: modal title uses token heading scale -->
+              <h3 class="modal-title heading-4">{{ title }}</h3>
             </slot>
             <button
               v-if="closable"
@@ -149,8 +150,6 @@ onUnmounted(() => {
 }
 
 .modal-title {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin: 0;
 }

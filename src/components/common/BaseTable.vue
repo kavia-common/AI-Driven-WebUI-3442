@@ -183,7 +183,8 @@ const getRowKey = (row: any, index: number) => {
   display: inline-block;
   margin-left: var(--space-2);
   opacity: 0.3;
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
 }
 
 .table-sortable th.sorted .table-sort-icon,
