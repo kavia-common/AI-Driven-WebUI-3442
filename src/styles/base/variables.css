@@ -101,8 +101,35 @@
 
   /* Line Heights */
   --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
+
+  /**
+   * Typography (semantic aliases)
+   * These alias tokens make it easy to apply a consistent hierarchy across the app
+   * without changing the underlying size scale.
+   */
+  --font-size-display: var(--font-size-4xl);
+  --font-size-h1: 2rem; /* Backup WAN-style page title */
+  --font-size-h2: var(--font-size-3xl);
+  --font-size-h3: var(--font-size-2xl);
+  --font-size-h4: var(--font-size-xl);
+  --font-size-h5: var(--font-size-lg);
+  --font-size-h6: var(--font-size-base);
+
+  --font-size-body-lg: var(--font-size-lg);
+  --font-size-body: var(--font-size-base);
+  --font-size-body-sm: var(--font-size-sm);
+  --font-size-caption: var(--font-size-sm);
+  --font-size-meta: var(--font-size-xs);
+  --font-size-label: var(--font-size-sm);
+  --font-size-button: var(--font-size-sm);
+
+  --line-height-display: var(--line-height-tight);
+  --line-height-heading: var(--line-height-tight);
+  --line-height-body: var(--line-height-normal);
+  --line-height-caption: var(--line-height-normal);
 
   /* Layout */
   --sidebar-width: 265px;

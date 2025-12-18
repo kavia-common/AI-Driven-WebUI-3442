@@ -311,7 +311,8 @@ onMounted(() => {
 
 .section-title {
   padding: 1rem 1.5rem;
-  font-size: 1rem;
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-body);
   color: var(--text-primary);
   background-color: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
@@ -389,7 +390,8 @@ input:checked + .slider:before {
 }
 
 .help-text {
-  font-size: 0.875rem;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-caption);
   color: var(--text-secondary);
   margin-top: 0.5rem;
 }

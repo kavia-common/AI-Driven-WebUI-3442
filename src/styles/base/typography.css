@@ -1,51 +1,210 @@
-/* Typography Styles */
+/* Typography Styles (Global)
+ *
+ * This file defines:
+ * 1) Semantic element defaults (h1..h6, p, small, label, button)
+ * 2) Token-driven typography utilities (e.g. .heading-1, .body-sm, .label)
+ *
+ * IMPORTANT:
+ * - Keep values in rem via tokens for accessibility.
+ * - Avoid aggressive resets; keep this focused on typography only.
+ */
 
-h1, .h1 {
-  font-size: var(--font-size-4xl);
+html {
+  /* Sensible base for rem calculations; keep at 16px unless a theme overrides it */
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+}
+
+/* ----------------------------
+ * Semantic element defaults
+ * ---------------------------- */
+
+h1,
+.h1 {
+  font-size: var(--font-size-h1);
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-heading);
   color: var(--text-primary);
 }
 
-h2, .h2 {
-  font-size: var(--font-size-3xl);
+h2,
+.h2 {
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-heading);
   color: var(--text-primary);
 }
 
-h3, .h3 {
-  font-size: var(--font-size-2xl);
+h3,
+.h3 {
+  font-size: var(--font-size-h3);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-heading);
   color: var(--text-primary);
 }
 
-h4, .h4 {
-  font-size: var(--font-size-xl);
+h4,
+.h4 {
+  font-size: var(--font-size-h4);
   font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-normal);
+  line-height: var(--line-height-body);
   color: var(--text-primary);
 }
 
-h5, .h5 {
-  font-size: var(--font-size-lg);
+h5,
+.h5 {
+  font-size: var(--font-size-h5);
   font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-normal);
+  line-height: var(--line-height-body);
   color: var(--text-primary);
 }
 
-h6, .h6 {
-  font-size: var(--font-size-base);
+h6,
+.h6 {
+  font-size: var(--font-size-h6);
   font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-normal);
+  line-height: var(--line-height-body);
   color: var(--text-primary);
 }
 
 p {
-  margin-bottom: var(--space-4);
-  line-height: var(--line-height-relaxed);
+  margin: 0 0 var(--space-4) 0;
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
 }
+
+small {
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  color: var(--text-secondary);
+}
+
+label {
+  font-size: var(--font-size-label);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* ----------------------------
+ * Typography utilities (new)
+ * ---------------------------- */
+
+/* Headings */
+.heading-1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+}
+
+.heading-2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+}
+
+.heading-3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+}
+
+.heading-4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-body);
+}
+
+.heading-5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-body);
+}
+
+.heading-6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-body);
+}
+
+/* Section titles / card titles */
+.section-title-text {
+  font-size: var(--font-size-h6); /* Backup WAN section-title is 1rem */
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+}
+
+.card-title-text {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+}
+
+/* Body */
+.body-lg {
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-body);
+}
+
+.body {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-body);
+}
+
+.body-sm {
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-body);
+}
+
+/* Caption/meta/help */
+.caption {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-caption);
+  color: var(--text-secondary);
+}
+
+.meta {
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-caption);
+  color: var(--text-tertiary);
+}
+
+/* Labels & buttons */
+.label {
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+}
+
+.button-text {
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+/* ----------------------------
+ * Backwards-compatible utilities (existing)
+ * ---------------------------- */
 
 .text-xs {
   font-size: var(--font-size-xs);
