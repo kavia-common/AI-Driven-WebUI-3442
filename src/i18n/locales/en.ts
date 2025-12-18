@@ -41,12 +41,7 @@ const translations = {
     alg: 'ALG',
     security: 'Security',
     ipFiltering: 'IP Filtering',
-
-    // IMPORTANT:
-    // Sidebar uses menu.macFiltering (not menu.generalMacFiltering).
-    // Keep both keys; macFiltering is for Sidebar, generalMacFiltering is referenced elsewhere.
     macFiltering: 'MAC Filtering',
-
     routing: 'Routing',
 
     // Advance Setup (Sidebar sub-menu order)
@@ -73,7 +68,17 @@ const translations = {
     traceRouteDiagnosis: 'Trace Route Diagnosis',
     dnsDiagnosis: 'DNS Diagnosis',
 
+    // Non-sidebar / legacy keys kept for compatibility
+    // TODO(i18n): menu.language not referenced in src; confirm whether still needed.
+    language: 'Language',
+    // NOTE: SecurityConfig.vue references menu.generalMacFiltering and menu.wifiMacFiltering.
+    generalMacFiltering: 'MAC Filtering',
+    wifiMacFiltering: 'WiFi MAC Filtering',
+    // TODO(i18n): menu.storageService not referenced in src; confirm whether still needed.
+    storageService: 'Storage Service',
+
     // IoT (non-sidebar top-level group)
+    // TODO(i18n): menu.iot/menu.thread/menu.matter* currently not referenced in src; confirm whether still needed.
     iot: 'Internet of Things',
     thread: 'Thread',
     matter: 'Matter',
@@ -88,13 +93,7 @@ const translations = {
     matterEevsecontrol: 'EevseControl',
     matterQrscanner: 'QR Scanner',
     matterQuickSetup: 'Quick Setup',
-    matterManualPairing: 'Manual Pairing',
-
-    // Non-sidebar / legacy keys kept for compatibility
-    language: 'Language',
-    generalMacFiltering: 'MAC Filtering',
-    wifiMacFiltering: 'WiFi MAC Filtering',
-    storageService: 'Storage Service'
+    matterManualPairing: 'Manual Pairing'
   },
 
   dashboard: {

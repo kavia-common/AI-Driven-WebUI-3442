@@ -32,6 +32,8 @@ export default {
     alg: 'ALG',
     security: '安全',
     ipFiltering: 'IP 过滤',
+    // TODO(i18n): Missing key to match en.ts (used by Sidebar): menu.macFiltering
+    macFiltering: '',
     generalMacFiltering: 'MAC 过滤',
     wifiMacFiltering: 'Wi-Fi MAC 过滤',
     routing: '路由',
