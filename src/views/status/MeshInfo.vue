@@ -135,7 +135,7 @@ onUnmounted(() => {
         <!-- Network Information Section -->
         <div class="panel-section" :data-testid="qa('mesh-network-section')">
           <div class="header-row">
-            <div class="section-title-sp" :data-testid="qa('mesh-network-title')">{{ t('mesh.networkInformation') }}</div>
+            <div class="section-title-sp section-title-text" :data-testid="qa('mesh-network-title')">{{ t('mesh.networkInformation') }}</div>
             <button 
               class="btn btn-primary"
               :data-testid="qa('mesh-toggle-view-button')"
@@ -187,7 +187,7 @@ onUnmounted(() => {
 
 <style scoped>
 .section-title-sp {
-  font-size: 1rem;
+  /* Typography handled by global tokens/utilities via .section-title-text. */
   color: var(--text-primary);
   padding: 0.5rem 0rem;
   background-color: white;

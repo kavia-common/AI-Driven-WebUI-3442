@@ -92,7 +92,7 @@ onMounted(fetchMeshConfig);
       <div v-if="isMeshDisabledByMLO" class="mlo-status" :data-testid="qa('wireless-mesh-config-mlo-status')">
         <div class="info-banner" :data-testid="qa('wireless-mesh-config-mlo-info-banner')">
           <span class="material-icons">info</span>
-          <span>{{ t('wireless.mloMeshWarning') }}</span>
+          <span class="body-sm">{{ t('wireless.mloMeshWarning') }}</span>
         </div>
       </div>
 
@@ -111,7 +111,7 @@ onMounted(fetchMeshConfig);
       </div>
 
       <div class="common-ssid" v-if="meshData.WlanMesh.MeshEnable === 1" :data-testid="qa('wireless-mesh-config-ssid-section')">
-        <div class="section-title" :data-testid="qa('wireless-mesh-config-ssid-title')">{{ t('wireless.commonSsidConfig') }}</div>
+        <div class="section-title section-title-text" :data-testid="qa('wireless-mesh-config-ssid-title')">{{ t('wireless.commonSsidConfig') }}</div>
         <div class="ssid-content" :data-testid="qa('wireless-mesh-config-ssid-content')">
           <div class="form-group">
             <label :data-testid="qa('wireless-mesh-config-ssid-label')">SSID</label>
@@ -263,7 +263,7 @@ input {
   padding: 0.5rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  font-size: 0.9rem;
+  /* Typography handled globally (token-driven). */
 }
 
 .button-group {

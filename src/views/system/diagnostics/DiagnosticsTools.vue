@@ -27,7 +27,7 @@ const tabs = computed(() => [
           <button
             v-for="tab in tabs"
             :key="tab.id"
-            class="tab-button"
+            class="tab-button button-text"
             :class="{ active: activeTab === tab.id }"
             :data-testid="qa(`diagnostics-tab-${tab.id}`)"
             @click="activeTab = tab.id"

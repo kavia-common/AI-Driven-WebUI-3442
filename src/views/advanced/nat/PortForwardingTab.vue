@@ -1,7 +1,7 @@
 <template>
   <div class="port-forwarding-management">
     <div class="header-row">
-      <div class="section-title-sp">{{ $t('portForwarding.title') }}</div>
+      <div class="section-title-sp section-title-text">{{ $t('portForwarding.title') }}</div>
       <button v-if="!isEditing" class="btn btn-primary" @click="handleAdd">
         <span class="material-icons">add</span>
         {{ $t('common.add') }}
@@ -391,8 +391,7 @@ onMounted(fetchRules);
 
 .error-banner span:not(.material-icons) {
   flex: 1;
-  font-size: 0.875rem;
-  font-weight: 500;
+  /* Typography handled by global tokens/utilities (e.g., .body-sm, .label). */
 }
 
 .error-banner .close-btn {

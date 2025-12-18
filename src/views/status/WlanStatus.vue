@@ -38,7 +38,7 @@ onMounted(() => {
     
     <div v-if="wlanData" class="status-content" :data-testid="qa('wlan-content')">
       <div v-for="band in wlanData.StatusWlan" :key="band.Band" class="panel-section" :data-testid="qa(`wlan-band-${slug(band.Band)}`)">
-        <div class="section-title" :data-testid="qa(`wlan-band-title-${slug(band.Band)}`)">WiFi {{ band.Band }}</div>
+        <div class="section-title section-title-text" :data-testid="qa(`wlan-band-title-${slug(band.Band)}`)">WiFi {{ band.Band }}</div>
         
         <div class="card-content">
           <WlanBandInfo :band="band" />

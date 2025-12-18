@@ -153,7 +153,7 @@ input {
   padding: 0.5rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  font-size: 0.9rem;
+  /* Typography handled globally (token-driven). */
 }
 
 .switch-label {

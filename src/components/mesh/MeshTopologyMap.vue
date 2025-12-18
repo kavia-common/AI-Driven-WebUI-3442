@@ -390,8 +390,10 @@ onUnmounted(() => {
         top: `${hoverPosition.y + 10}px`
       }"
     >
-      <div class="tooltip-content" :data-testid="qa('mesh-topology-map-tooltip-content')">
-        <div :data-testid="qa('mesh-topology-map-tooltip-name')"><strong>{{ hoveredNode.Name }}</strong></div>
+      <div class="tooltip-content body-sm" :data-testid="qa('mesh-topology-map-tooltip-content')">
+        <div :data-testid="qa('mesh-topology-map-tooltip-name')">
+          <strong class="label">{{ hoveredNode.Name }}</strong>
+        </div>
         <div :data-testid="qa('mesh-topology-map-tooltip-mode')">Mode: {{ hoveredNode.Mode }}</div>
         <div :data-testid="qa('mesh-topology-map-tooltip-ip')">IP: {{ hoveredNode.ipv4 }}</div>
         <div :data-testid="qa('mesh-topology-map-tooltip-mac')">MAC: {{ hoveredNode.MACAddress }}</div>
@@ -406,7 +408,7 @@ onUnmounted(() => {
         :data-testid="qa('mesh-topology-map-detail-panel')"
       >
         <div class="panel-header">
-          <h3>{{ t('mesh.nodeDetails') || 'Node Details' }}</h3>
+          <h3 class="heading-6">{{ t('mesh.nodeDetails') || 'Node Details' }}</h3>
           <button
             class="close-btn"
             @click="selectedNode = null"
@@ -415,49 +417,49 @@ onUnmounted(() => {
             ✕
           </button>
         </div>
-        <div class="panel-content">
+        <div class="panel-content body-sm">
           <div class="detail-section">
             <div class="detail-row">
-              <span class="detail-label">{{ t('mesh.deviceName') || 'Device Name' }}:</span>
-              <span class="detail-value">{{ selectedNode.Name }}</span>
+              <span class="detail-label label">{{ t('mesh.deviceName') || 'Device Name' }}:</span>
+              <span class="detail-value body-sm">{{ selectedNode.Name }}</span>
             </div>
             <div class="detail-row">
-              <span class="detail-label">{{ t('mesh.mode') || 'Mode' }}:</span>
-              <span class="detail-value" :class="`mode-${selectedNode.Mode.toLowerCase()}`">
+              <span class="detail-label label">{{ t('mesh.mode') || 'Mode' }}:</span>
+              <span class="detail-value body-sm" :class="`mode-${selectedNode.Mode.toLowerCase()}`">
                 {{ selectedNode.Mode }}
               </span>
             </div>
             <div class="detail-row">
-              <span class="detail-label">{{ t('mesh.ipAddress') || 'IP Address' }}:</span>
-              <span class="detail-value">{{ selectedNode.ipv4 || '-' }}</span>
+              <span class="detail-label label">{{ t('mesh.ipAddress') || 'IP Address' }}:</span>
+              <span class="detail-value body-sm">{{ selectedNode.ipv4 || '-' }}</span>
             </div>
             <div class="detail-row">
-              <span class="detail-label">{{ t('mesh.macAddress') || 'MAC Address' }}:</span>
-              <span class="detail-value mono">{{ selectedNode.MACAddress }}</span>
+              <span class="detail-label label">{{ t('mesh.macAddress') || 'MAC Address' }}:</span>
+              <span class="detail-value mono body-sm">{{ selectedNode.MACAddress }}</span>
             </div>
             <div class="detail-row">
-              <span class="detail-label">{{ t('mesh.mediaType') || 'Media Type' }}:</span>
-              <span class="detail-value">{{ selectedNode.MediaType }}</span>
+              <span class="detail-label label">{{ t('mesh.mediaType') || 'Media Type' }}:</span>
+              <span class="detail-value body-sm">{{ selectedNode.MediaType }}</span>
             </div>
             <div class="detail-row" v-if="selectedNode.Upstream !== '-'">
-              <span class="detail-label">{{ t('mesh.upstream') || 'Upstream' }}:</span>
-              <span class="detail-value mono">{{ selectedNode.Upstream }}</span>
+              <span class="detail-label label">{{ t('mesh.upstream') || 'Upstream' }}:</span>
+              <span class="detail-value mono body-sm">{{ selectedNode.Upstream }}</span>
             </div>
             <div class="detail-row" v-if="selectedNode.SupportedBand">
-              <span class="detail-label">{{ t('mesh.band') || 'Band' }}:</span>
-              <span class="detail-value">{{ selectedNode.SupportedBand }}</span>
+              <span class="detail-label label">{{ t('mesh.band') || 'Band' }}:</span>
+              <span class="detail-value body-sm">{{ selectedNode.SupportedBand }}</span>
             </div>
             <div class="detail-row" v-if="selectedNode.TxRate">
-              <span class="detail-label">{{ t('mesh.txRate') || 'TX Rate' }}:</span>
-              <span class="detail-value">{{ selectedNode.TxRate }}</span>
+              <span class="detail-label label">{{ t('mesh.txRate') || 'TX Rate' }}:</span>
+              <span class="detail-value body-sm">{{ selectedNode.TxRate }}</span>
             </div>
             <div class="detail-row" v-if="selectedNode.RxRate">
-              <span class="detail-label">{{ t('mesh.rxRate') || 'RX Rate' }}:</span>
-              <span class="detail-value">{{ selectedNode.RxRate }}</span>
+              <span class="detail-label label">{{ t('mesh.rxRate') || 'RX Rate' }}:</span>
+              <span class="detail-value body-sm">{{ selectedNode.RxRate }}</span>
             </div>
             <div class="detail-row" v-if="selectedNode.RSSI">
-              <span class="detail-label">{{ t('mesh.rssi') || 'RSSI' }}:</span>
-              <span class="detail-value">{{ selectedNode.RSSI }} dBm</span>
+              <span class="detail-label label">{{ t('mesh.rssi') || 'RSSI' }}:</span>
+              <span class="detail-value body-sm">{{ selectedNode.RSSI }} dBm</span>
             </div>
           </div>
         </div>
@@ -498,7 +500,7 @@ onUnmounted(() => {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   pointer-events: none;
   z-index: 1000;
-  font-size: 0.9rem;
+  /* Typography handled by global tokens/utilities in markup. */
 }
 
 .tooltip-content {
@@ -530,8 +532,7 @@ onUnmounted(() => {
 
 .panel-header h3 {
   margin: 0;
-  font-size: 1.125rem;
-  font-weight: 600;
+  /* Typography handled by global tokens/utilities (e.g., .heading-6). */
   color: #333;
 }
 
@@ -573,7 +574,7 @@ onUnmounted(() => {
 }
 
 .detail-label {
-  font-size: 0.75rem;
+  /* Typography handled by global tokens/utilities (e.g., .label). */
   font-weight: 600;
   color: #666;
   text-transform: uppercase;
@@ -581,7 +582,7 @@ onUnmounted(() => {
 }
 
 .detail-value {
-  font-size: 0.9rem;
+  /* Typography handled by global tokens/utilities (e.g., .body-sm). */
   color: #333;
   word-break: break-all;
 }
@@ -591,7 +592,7 @@ onUnmounted(() => {
   background-color: #f5f5f5;
   padding: 0.25rem 0.5rem;
   border-radius: 3px;
-  font-size: 0.85rem;
+  /* Typography handled by global tokens/utilities (e.g., .body-sm). */
 }
 
 .mode-controller {

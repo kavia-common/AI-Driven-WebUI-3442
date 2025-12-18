@@ -55,12 +55,18 @@ onUnmounted(() => {
     <div class="status-content" :data-testid="qa('dashboard-content')">
     <div v-if="loading" class="loading-state" :data-testid="qa('dashboard-loading')">
       <div class="loading-spinner"></div>
-      <p>Loading dashboard data...</p>
+      <p class="body">Loading dashboard data...</p>
     </div>
 
     <div v-else-if="error" class="error-state" :data-testid="qa('dashboard-error')">
-      <p>{{ error }}</p>
-      <button @click="fetchData" class="retry-button" :data-testid="qa('dashboard-retry-button')">Retry</button>
+      <p class="body">{{ error }}</p>
+      <button
+        @click="fetchData"
+        class="retry-button button-text"
+        :data-testid="qa('dashboard-retry-button')"
+      >
+        Retry
+      </button>
     </div>
     
     <div v-else class="dashboard-grid" :data-testid="qa('dashboard-grid')">
