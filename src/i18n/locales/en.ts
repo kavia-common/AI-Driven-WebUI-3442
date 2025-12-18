@@ -1,16 +1,8 @@
 /* English translations */
 const translations = {
-  // Dashboard/Home
   menu: {
-    // Top-level (Sidebar)
-    home: 'Home',
     status: 'Status',
-    basicSetup: 'Basic Setup',
-    advanceSetup: 'Advance Setup',
-    application: 'Application',
-    management: 'Management',
-
-    // Status (Sidebar sub-menu order)
+    home: 'Home',
     wan: 'WAN',
     wanFailover: 'WAN Failover',
     lan: 'LAN',
@@ -23,8 +15,7 @@ const translations = {
     dualImage: 'Dual Image',
     cellular: 'Cellular',
     logs: 'Log',
-
-    // Basic Setup (Sidebar sub-menu order)
+    basicSetup: 'Basic Setup',
     backupWan: 'Backup WAN',
     ipv4Config: 'IPv4 Configuration',
     ipv6Config: 'IPv6 Configuration',
@@ -41,27 +32,22 @@ const translations = {
     alg: 'ALG',
     security: 'Security',
     ipFiltering: 'IP Filtering',
-
-    // IMPORTANT:
-    // Sidebar uses menu.macFiltering (not menu.generalMacFiltering).
-    // Keep both keys; macFiltering is for Sidebar, generalMacFiltering is referenced elsewhere.
-    macFiltering: 'MAC Filtering',
-
+    generalMacFiltering: 'MAC Filtering',
+    wifiMacFiltering: 'WiFi MAC Filtering',
     routing: 'Routing',
-
-    // Advance Setup (Sidebar sub-menu order)
+    advanceSetup: 'Advance Setup',
     sshService: 'SSH Service',
     serviceControl: 'Service Control',
     qos: 'QoS',
-
-    // Application (Sidebar sub-menu order)
+    application: 'Application',
     xperienceControl: 'XperienceControl',
     upnp: 'UPnP IGD',
     ddns: 'DDNS',
-
-    // Management (Sidebar sub-menu order)
+    storageService: 'Storage Service',
+    management: 'Management',
     reboot: 'Reboot',
     account: 'Account Management',
+    language: 'Language',
     ntp: 'NTP',
     device: 'Device Management',
     settings: 'Settings',
@@ -72,31 +58,26 @@ const translations = {
     pingDiagnosis: 'Ping Diagnosis',
     traceRouteDiagnosis: 'Trace Route Diagnosis',
     dnsDiagnosis: 'DNS Diagnosis',
-
-    // IoT (non-sidebar top-level group)
     iot: 'Internet of Things',
     thread: 'Thread',
-    matter: 'Matter',
-    matterHome: 'Home',
-    matterPairing: 'Pairing',
-    matterOnoff: 'OnOff',
-    matterMultiadmin: 'MultiAdmin',
-    matterSubscribe: 'Subscribe',
-    matterGetstatus: 'GetStatus',
-    matterBinding: 'Binding',
-    matterMediacontrol: 'MediaControl',
-    matterEevsecontrol: 'EevseControl',
-    matterQrscanner: 'QR Scanner',
+    matter : 'Matter',
+    matterHome : 'Home',
+    matterPairing : 'Pairing',
+    matterOnoff : 'OnOff',
+    matterMultiadmin : 'MultiAdmin',
+    matterSubscribe : 'Subscribe',
+    matterGetstatus : 'GetStatus',
+    matterBinding : 'Binding',
+    matterMediacontrol : 'MediaControl',
+    matterEevsecontrol : 'EevseControl',
+    matterQrscanner : 'QR Scanner',
     matterQuickSetup: 'Quick Setup',
-    matterManualPairing: 'Manual Pairing',
-
-    // Non-sidebar / legacy keys kept for compatibility
-    language: 'Language',
-    generalMacFiltering: 'MAC Filtering',
-    wifiMacFiltering: 'WiFi MAC Filtering',
-    storageService: 'Storage Service'
+    matterManualPairing: 'Manual Pairing'
   },
-
+  header: {
+    account: 'Account',
+    logout: 'Logout'
+  },
   dashboard: {
     system: 'System',
     softwareVersion: 'SoftwareVersion',
@@ -139,8 +120,6 @@ const translations = {
     scanQRCode: 'Scan QR Code',
     quickSetup: 'Quick Setup'
   },
-
-  // Status
   wan: {
     title: 'WAN Status',
     operationMode: 'Operation Mode',
@@ -166,7 +145,6 @@ const translations = {
     type: 'Type',
     prefix: 'Prefix'
   },
-
   lan: {
     title: 'LAN',
     macAddress: 'MAC Address',
@@ -178,102 +156,6 @@ const translations = {
     netmask: 'Netmask',
     status: 'Status'
   },
-
-  wlan: {
-    title: 'WLAN Status',
-    channel: 'Channel',
-    bandwidth: 'Bandwidth',
-    macAddress: 'MAC Address',
-    interface: 'Interface',
-    name: 'Name',
-    alias: 'Alias',
-    status: 'Status',
-    ssid: 'SSID',
-    authentication: 'Authentication',
-    encryption: 'Encryption',
-    password: 'Password',
-    bssid: 'BSSID',
-    auto: '(auto)',
-    enable: 'Enable',
-    disable: 'Disable'
-  },
-
-  statistics: {
-    title: 'Statistics',
-    ethernet: 'Statistics - Ethernet',
-    wlan: 'Statistics - WLAN',
-    port: 'Port',
-    rxbytes: 'RxBytes',
-    rxpackets: 'RxPackets',
-    rxerror: 'RxError',
-    rxdiscard: 'RxDiscard',
-    txbytes: 'TxBytes',
-    txpackets: 'TxPackets',
-    txerror: 'TxError',
-    txdiscard: 'TxDiscard'
-  },
-
-  wifiNeighbor: {
-    title: 'WiFi Neighbor',
-    wifiNeighbor: 'WiFi Neighbor',
-    ssid: 'SSID',
-    bssid: 'BSSID',
-    channel: 'Channel',
-    signal: 'Signal (%)',
-    security: 'Security',
-    wirelessMode: 'Wireless Mode',
-    scan: 'SCAN',
-    scanning: 'Scanning...'
-  },
-
-  mesh: {
-    title: 'Mesh Information',
-    networkInformation: 'Mesh Network Information',
-    nodeList: 'Mesh Node List',
-    clientList: 'Mesh Client List',
-    name: 'Name',
-    mode: 'Mode',
-    ipAddress: 'IPv4 Address',
-    macAddress: 'MAC Address',
-    mediaType: 'Media Type',
-    supportedBand: 'Supported Band',
-    upstream: 'Upstream',
-    action: 'Action',
-    map: 'MAP',
-    list: 'LIST',
-    back: 'Back',
-    steeringControl: 'Steering Control',
-    selectedNode: 'Selected Node',
-    destination: 'Destination',
-    selectDestination: 'Select Destination',
-    band: 'Band',
-    selectBand: 'Select Band',
-    nodeDetails: 'Node Details',
-    deviceName: 'Device Name'
-  },
-
-  lcm: {
-    title: 'Status - LCM',
-    execEnv: 'Execution Environments',
-    execUnits: 'Execution Units',
-    deployUnits: 'Deployment Units',
-    deploymentUnits: 'Deployment Units',
-    name: 'Name',
-    status: 'Status',
-    url: 'URL',
-    uuid: 'UUID',
-    vendor: 'Vendor',
-    version: 'Version'
-  },
-
-  dualImage: {
-    title: 'Dual Image',
-    currentBootPartition: 'Current Boot Partition',
-    partitionInformation: 'Partition Information',
-    bootPartition: 'Boot Partition',
-    version: 'Version'
-  },
-
   cellular: {
     title: 'Cellular',
     status: 'Cellular Status',
@@ -321,34 +203,88 @@ const translations = {
     bytesReceived: 'Bytes Received',
     bytesSent: 'Bytes Sent'
   },
-
-  logStatus: {
-    title: 'System Log',
-    categories: 'Categories',
-    severity: 'Severity',
-    limit: 'Limit',
-    search: 'Search Keyword',
-    searchPlaceholder: 'Enter keyword to search...',
-    searchBtn: 'Search',
-    clearBtn: 'Clear',
-    exportBtn: 'Export Logs',
-    exporting: 'Exporting...',
-    source: 'Source',
-    matchCount: 'Match Count',
-    showing: 'Showing',
-    moreAvailable: 'More logs available on server',
-    all: 'All',
-    dhcp: 'DHCP',
-    cwmpd: 'CWMPD',
-    wifi: 'WiFi',
-    wan: 'WAN',
-    lan: 'LAN',
-    system: 'System',
-    kernel: 'Kernel',
-    firewall: 'Firewall',
-    lcm: 'LCM'
+  wlan: {
+    title: 'WLAN Status',
+    channel: 'Channel',
+    bandwidth: 'Bandwidth',
+    macAddress: 'MAC Address',
+    interface: 'Interface',
+    name: 'Name',
+    alias: 'Alias',
+    status: 'Status',
+    ssid: 'SSID',
+    authentication: 'Authentication',
+    encryption: 'Encryption',
+    password: 'Password',
+    bssid: 'BSSID',
+    auto: '(auto)',
+    enable: 'Enable',
+    disable: 'Disable'
   },
-
+  statistics: {
+    title: 'Statistics',
+    ethernet: 'Statistics - Ethernet',
+    wlan: 'Statistics - WLAN',
+    port: 'Port',
+    rxbytes: 'RxBytes',
+    rxpackets: 'RxPackets',
+    rxerror: 'RxError',
+    rxdiscard: 'RxDiscard',
+    txbytes: 'TxBytes',
+    txpackets: 'TxPackets',
+    txerror: 'TxError',
+    txdiscard: 'TxDiscard'
+  },
+  wifiNeighbor: {
+    title: 'WiFi Neighbor',
+    wifiNeighbor: 'WiFi Neighbor',
+    ssid: 'SSID',
+    bssid: 'BSSID',
+    channel: 'Channel',
+    signal: 'Signal (%)',
+    security: 'Security',
+    wirelessMode: 'Wireless Mode',
+    scan: 'SCAN',
+    scanning: 'Scanning...'
+  },
+  mesh: {
+    title: 'Mesh Information',
+    networkInformation: 'Mesh Network Information',
+    nodeList: 'Mesh Node List',
+    clientList: 'Mesh Client List',
+    name: 'Name',
+    mode: 'Mode',
+    ipAddress: 'IPv4 Address',
+    macAddress: 'MAC Address',
+    mediaType: 'Media Type',
+    supportedBand: 'Supported Band',
+    upstream: 'Upstream',
+    action: 'Action',
+    map: 'MAP',
+    list: 'LIST',
+    back: 'Back',
+    steeringControl: 'Steering Control',
+    selectedNode: 'Selected Node',
+    destination: 'Destination',
+    selectDestination: 'Select Destination',
+    band: 'Band',
+    selectBand: 'Select Band',
+    nodeDetails: 'Node Details',
+    deviceName: 'Device Name'
+  },
+  lcm: {
+    title: 'Status - LCM',
+    execEnv: 'Execution Environments',
+    execUnits: 'Execution Units',
+    deployUnits: 'Deployment Units',
+    deploymentUnits: 'Deployment Units',
+    name: 'Name',
+    status: 'Status',
+    url: 'URL',
+    uuid: 'UUID',
+    vendor: 'Vendor',
+    version: 'Version'
+  },
   systemStats: {
     title: 'System Stats',
     wanThroughput: 'WAN Throughput',
@@ -357,8 +293,132 @@ const translations = {
     tx: 'Tx (Sent)',
     rx: 'Rx (Received)'
   },
-
-  // Basic Setup
+  wireless: {
+    title: 'Wireless Settings',
+    basicConfig: 'Basic Config',
+    advancedConfig: 'Advanced Config',
+    wpsConfig: 'WPS Configuration',
+    meshNetwork: 'Mesh Network',
+    wlanExtender: 'WLAN Extender',
+    wifiZones: 'WiFi Zones',
+    settings: 'Settings',
+    ssid: 'SSID',
+    password: 'WPA Preshare Key',
+    mode: 'Mode',
+    bandwidth: 'Bandwidth',
+    channel: 'Channel',
+    autoChannel: 'Auto Channel',
+    wpsConfiguration: 'WPS Configuration',
+    wpsPushButton: 'WPS Push Button',
+    wpsPushButtonDesc: 'Click "WPS Push Button", then press the WPS pushbutton on the device you want to connect within two minutes',
+    wpsPinConnect: 'WPS PIN Code Connect',
+    wpsPinConnectDesc: 'Enter the PIN code generated by the client device, then click Connect Device button to connect to Wi-Fi.',
+    generatePinCode: 'Generate PIN Code',
+    devicePinDesc: 'Enter the PIN code generated by the router on the device to connect to Wi-Fi',
+    enterPin: 'Please Enter PIN Code',
+    connect: 'Connect Device',
+    vapInformation: 'VAP Information',
+    band: 'Band',
+    authentication: 'Authentication',
+    encryption: 'Encryption',
+    wpsStatus: 'WPS Status',
+    easyMesh: 'EasyMesh',
+    commonSsidConfig: 'Common SSID Configuration',
+    commonSsidBandSettings: 'Common SSID Band Settings',
+    pushButtonTitle: 'Connect a new device by pushbutton',
+    pinConnectTitle: 'Connect a new device by PIN',
+    devicePinTitle: 'PIN for adding this device to a network',
+    pushButton: 'WPS Push Button',
+    pinCode: 'PIN Code',
+    pinCodeOfClient: 'PIN Code of Client Device',
+    noPublicKeys: 'No public keys added',
+    extender: 'Extender',
+    enableWpsConfirm: 'Enable WPS',
+    enableWpsMessage: 'Enabling WPS will disable the MAC filter. Are you sure you want to continue?',
+    commonSsidSettings: 'Common SSID Settings',
+    commonSsidEnable: 'Common SSID Enable',
+    mloSettings: 'MLO Settings',
+    mloEnable: 'MLO Enable',
+    mloModeDisabled: 'MLO is enabled – Mode cannot be changed.',
+    mloMeshDisabled: 'MLO is enabled on one or more APs (Basic or Guest) – Mesh Settings cannot be changed.',
+    meshMloDisabled: 'Mesh is enabled – MLO settings cannot be changed.',
+    commonSsidDisabled: 'Common SSID is disabled – MLO settings cannot be changed.',
+    mloMeshWarning: 'MLO is currently enabled on one or more APs (Basic or Guest). It will be disabled automatically when applying Mesh settings.'
+  },
+  guest: {
+    title: 'Guest Access',
+    guestWiFi: 'Guest WiFi',
+    guestLAN: 'Guest LAN',
+    deviceConnected: 'Device Connected',
+    enable: 'Enable',
+    mloEnable: 'MLO Enable',
+    ssid: 'SSID',
+    authentication: 'Authentication',
+    password: 'Password',
+    lanIpSetting: 'LAN IP Setting',
+    ipAddress: 'IP Address',
+    subnetMask: 'Subnet Mask',
+    dhcpSetting: 'DHCP Setting',
+    enableDhcpServer: 'Enable DHCP Server',
+    dnsServer: 'DNS Server',
+    beginAddress: 'Begin Address',
+    endAddress: 'End Address',
+    leaseTime: 'Lease Time',
+    seconds: 'Seconds',
+    hostName: 'Host Name',
+    macAddress: 'MAC Address'
+  },
+  macfilter: {
+    title: 'Wireless MAC Filter',
+    ssid: 'SSID',
+    aclMode: 'ACL Mode',
+    disabled: 'Disabled',
+    deny: 'Deny',
+    allow: 'Allow',
+    macAddressList: 'MAC Address Filter List',
+    enterMacAddress: 'Enter MAC address (e.g., 00:11:22:33:44:55)',
+    add: 'Add',
+    no: 'No.',
+    macAddress: 'MAC Address',
+    action: 'Action',
+    noMacAddresses: 'No MAC addresses added',
+    emptyMacError: 'MAC address cannot be empty',
+    invalidMacFormat: 'Invalid MAC address format',
+    duplicateMacError: 'This MAC address already exists',
+    changeModeTitle: 'Change MAC Filter Mode',
+    changeModeMessage: 'Enabling MAC filter will disable WPS. Do you want to continue?',
+    deleteMacTitle: 'Delete MAC Address',
+    deleteMacMessage: 'Are you sure you want to delete this MAC address?',
+    applyChangesTitle: 'Apply MAC Filter Settings',
+    applyChangesMessage: 'Enabling MAC filter will disable WPS. Do you want to continue?'
+  },
+  wirelessExtender: {
+    title: 'Wireless Extender',
+    configuration: 'Extender Configurations',
+    enabled: 'Extender Enabled',
+    role: 'Extender Role',
+    repeater: 'Repeater',
+    meshAgent: 'Mesh Agent',
+    connectionStatus: 'Connection Status',
+    band: 'Band',
+    status: 'Status',
+    ssid: 'SSID',
+    security: 'Security',
+    wps: 'WPS',
+    pinCode: 'WPS Pin Code',
+    pairing: 'WPS Pairing',
+    neighborScan: 'Neighbor AP Scan',
+    scan: 'Scan',
+    scanning: 'Scanning...',
+    select: 'Select',
+    connectToAP: 'Connect to AP',
+    radioBand: 'Radio Band',
+    wifiMode: 'WiFi Mode',
+    wpaPreshareKey: 'WPA Preshare Key',
+    connect: 'Connect',
+    connected: 'Connected',
+    disconnected: 'Disconnected'
+  },
   wanSetup: {
     title: 'WAN Settings',
     modeSetup: 'WAN Mode Setup',
@@ -368,7 +428,6 @@ const translations = {
     manual: 'Manual',
     auto: 'Automatic'
   },
-
   wanManagement: {
     addMode: 'Add WAN Mode',
     editMode: 'Edit WAN Mode',
@@ -402,7 +461,6 @@ const translations = {
     ipv4DnsMode: 'IPv4 DNS Mode',
     ipv6DnsMode: 'IPv6 DNS Mode'
   },
-
   backupWan: {
     title: 'Backup WAN Management',
     backupWan: 'Backup WAN',
@@ -421,7 +479,6 @@ const translations = {
     dnsServer: 'DNS Server',
     enableHint: 'Enable will show WAN Health Check configuration, Disable will hide it'
   },
-
   lanBasic: {
     title: 'LAN Settings',
     ipv4Configuration: 'IPv4 Configuration',
@@ -446,123 +503,27 @@ const translations = {
     apply: 'Apply',
     cancel: 'Cancel'
   },
-
-  wireless: {
-    title: 'Wireless Settings',
-    basicConfig: 'Basic Config',
-    advancedConfig: 'Advanced Config',
-    wpsConfig: 'WPS Configuration',
-    meshNetwork: 'Mesh Network',
-    wlanExtender: 'WLAN Extender',
-    wifiZones: 'WiFi Zones',
-    settings: 'Settings',
-    ssid: 'SSID',
-    password: 'WPA Preshare Key',
-    mode: 'Mode',
-    bandwidth: 'Bandwidth',
-    channel: 'Channel',
-    autoChannel: 'Auto Channel',
-    wpsConfiguration: 'WPS Configuration',
-    wpsPushButton: 'WPS Push Button',
-    wpsPushButtonDesc:
-      'Click "WPS Push Button", then press the WPS pushbutton on the device you want to connect within two minutes',
-    wpsPinConnect: 'WPS PIN Code Connect',
-    wpsPinConnectDesc:
-      'Enter the PIN code generated by the client device, then click Connect Device button to connect to Wi-Fi.',
-    generatePinCode: 'Generate PIN Code',
-    devicePinDesc: 'Enter the PIN code generated by the router on the device to connect to Wi-Fi',
-    enterPin: 'Please Enter PIN Code',
-    connect: 'Connect Device',
-    vapInformation: 'VAP Information',
-    band: 'Band',
-    authentication: 'Authentication',
-    encryption: 'Encryption',
-    wpsStatus: 'WPS Status',
-    easyMesh: 'EasyMesh',
-    commonSsidConfig: 'Common SSID Configuration',
-    commonSsidBandSettings: 'Common SSID Band Settings',
-    pushButtonTitle: 'Connect a new device by pushbutton',
-    pinConnectTitle: 'Connect a new device by PIN',
-    devicePinTitle: 'PIN for adding this device to a network',
-    pushButton: 'WPS Push Button',
-    pinCode: 'PIN Code',
-    pinCodeOfClient: 'PIN Code of Client Device',
-    noPublicKeys: 'No public keys added',
-    extender: 'Extender',
-    enableWpsConfirm: 'Enable WPS',
-    enableWpsMessage: 'Enabling WPS will disable the MAC filter. Are you sure you want to continue?',
-    commonSsidSettings: 'Common SSID Settings',
-    commonSsidEnable: 'Common SSID Enable',
-    mloSettings: 'MLO Settings',
-    mloEnable: 'MLO Enable',
-    mloModeDisabled: 'MLO is enabled – Mode cannot be changed.',
-    mloMeshDisabled: 'MLO is enabled on one or more APs (Basic or Guest) – Mesh Settings cannot be changed.',
-    meshMloDisabled: 'Mesh is enabled – MLO settings cannot be changed.',
-    commonSsidDisabled: 'Common SSID is disabled – MLO settings cannot be changed.',
-    mloMeshWarning:
-      'MLO is currently enabled on one or more APs (Basic or Guest). It will be disabled automatically when applying Mesh settings.'
-  },
-
-  guest: {
-    title: 'Guest Access',
-    guestWiFi: 'Guest WiFi',
-    guestLAN: 'Guest LAN',
-    deviceConnected: 'Device Connected',
-    enable: 'Enable',
-    mloEnable: 'MLO Enable',
-    ssid: 'SSID',
-    authentication: 'Authentication',
-    password: 'Password',
-    lanIpSetting: 'LAN IP Setting',
-    ipAddress: 'IP Address',
-    subnetMask: 'Subnet Mask',
-    dhcpSetting: 'DHCP Setting',
-    enableDhcpServer: 'Enable DHCP Server',
-    dnsServer: 'DNS Server',
-    beginAddress: 'Begin Address',
-    endAddress: 'End Address',
-    leaseTime: 'Lease Time',
-    seconds: 'Seconds',
-    hostName: 'Host Name',
-    macAddress: 'MAC Address'
-  },
-
-  wirelessExtender: {
-    title: 'Wireless Extender',
-    configuration: 'Extender Configurations',
-    enabled: 'Extender Enabled',
-    role: 'Extender Role',
-    repeater: 'Repeater',
-    meshAgent: 'Mesh Agent',
-    connectionStatus: 'Connection Status',
-    band: 'Band',
+  serviceControl: {
+    title: 'Service Control',
+    management: 'Service Control Management',
+    addRule: 'Add Rule',
+    editRule: 'Edit Rule',
+    serviceType: 'Service Type',
+    accessDirection: 'Access Direction',
+    protocol: 'Protocol',
+    ipRange: 'IP Range',
     status: 'Status',
-    ssid: 'SSID',
-    security: 'Security',
-    wps: 'WPS',
-    pinCode: 'WPS Pin Code',
-    pairing: 'WPS Pairing',
-    neighborScan: 'Neighbor AP Scan',
-    scan: 'Scan',
-    scanning: 'Scanning...',
-    select: 'Select',
-    connectToAP: 'Connect to AP',
-    radioBand: 'Radio Band',
-    wifiMode: 'WiFi Mode',
-    wpaPreshareKey: 'WPA Preshare Key',
-    connect: 'Connect',
-    connected: 'Connected',
-    disconnected: 'Disconnected'
+    action: 'Action',
+    enabled: 'Enabled',
+    disabled: 'Disabled',
+    confirmDelete: 'Are you sure you want to delete this rule?'
   },
-
-  // Advanced
   nat: {
     title: 'NAT Settings',
     portForwarding: 'Port Forwarding',
     dmzHost: 'DMZ Host',
     alg: 'ALG'
   },
-
   portForwarding: {
     title: 'Port Forwarding',
     addRule: 'Add Rule',
@@ -588,16 +549,13 @@ const translations = {
     localPortEnd: 'Local Port Range(End)',
     comment: 'Comment'
   },
-
   dmz: {
     title: 'DMZ Settings',
     enable: 'Enable DMZ',
     ipAddress: 'IP Address',
     ipAddressHint: 'Enter the IP address of the DMZ host',
-    description:
-      'DMZ (Demilitarized Zone) allows a computer on your local network to be fully exposed to the Internet. This feature is useful for gaming or video conferencing applications that have problems working through NAT.'
+    description: 'DMZ (Demilitarized Zone) allows a computer on your local network to be fully exposed to the Internet. This feature is useful for gaming or video conferencing applications that have problems working through NAT.'
   },
-
   ddns: {
     title: 'DDNS Settings',
     management: 'DDNS Management',
@@ -617,182 +575,6 @@ const translations = {
     cancel: 'Cancel',
     confirmDelete: 'Are you sure you want to delete this DDNS service?'
   },
-
-  serviceControl: {
-    title: 'Service Control',
-    management: 'Service Control Management',
-    addRule: 'Add Rule',
-    editRule: 'Edit Rule',
-    serviceType: 'Service Type',
-    accessDirection: 'Access Direction',
-    protocol: 'Protocol',
-    ipRange: 'IP Range',
-    status: 'Status',
-    action: 'Action',
-    enabled: 'Enabled',
-    disabled: 'Disabled',
-    confirmDelete: 'Are you sure you want to delete this rule?'
-  },
-
-  qos: {
-    title: 'QoS Configuration',
-    bandwidthTab: 'QoS Bandwidth',
-    ruleTab: 'QoS Rule',
-    enableQos: 'Enable QoS',
-    downloadBandwidth: 'Download Bandwidth',
-    uploadBandwidth: 'Upload Bandwidth',
-    priority: 'Priority',
-    minimumReserve: 'Minimum reserve (%)',
-    maximumAllowed: 'Maximum allowed (%)',
-    actualSpeedRange: 'Actual speed range',
-    whatThisDoes: 'What this does',
-    high: 'High',
-    medium: 'Medium',
-    low: 'Low',
-    lowLatency: 'Low-latency',
-    atLeast: 'At least',
-    upTo: 'Up to',
-    goesFirst: 'Goes first.',
-    normalLane: 'The normal lane.',
-    yieldsWhenBusy: 'Yields when busy.',
-    lowDelayFirst: 'Low delay first.',
-    formulaNote1: '$min = $Upload_Bandwidth x $Minimum_reserve',
-    formulaNote2: '$max = $Upload_Bandwidth x $Maximum_allowed',
-    validation1: 'Minimum reserve <= Maximum allowed',
-    validation2: 'Minimum reserve cannot exceed 100 %',
-    qosRuleLists: 'QoS rule lists',
-    addRule: 'Add rule',
-    no: 'No.',
-    type: 'Type',
-    name: 'Name',
-    description: 'Description',
-    action: 'Action',
-    application: 'Application',
-    device: 'Device',
-    addQosRule: 'Add QoS rule',
-    editRule: 'Edit QoS rule',
-    applicationType: 'Application Type',
-    applicationName: 'Application Name',
-    port: 'Port',
-    protocol: 'Protocol',
-    macAddress: 'MAC Address',
-    portPlaceholder: '80, 443, 8000-8005',
-    portHint:
-      'Enter ports as a list. Use commas to separate items and a dash for ranges. Examples: 80, 443, 8000-8005',
-    ruleNote1: 'You can drag and drop to change order',
-    ruleNote2: 'Apply will send the changes',
-    ruleNote3: 'Cancel will discard changes',
-    priorityRequired: 'Priority is required',
-    applicationNameRequired: 'Application name is required',
-    portRequired: 'Port is required',
-    protocolRequired: 'Protocol is required',
-    deviceRequired: 'Device is required',
-    confirmDelete: 'Are you sure you want to delete this rule?'
-  },
-
-  ipFiltering: {
-    enableIpFiltering: 'Enable IP Filtering',
-    ipFilteringMode: 'IP Filtering Mode',
-    blacklist: 'Blacklist',
-    whitelist: 'Whitelist',
-    filterMode: 'Filter Mode',
-    enableIpv4: 'Enable IPv4',
-    enableIpv6: 'Enable IPv6',
-    localIpAddressStart: 'Local IP Address(Start)',
-    localIpAddressEnd: 'Local IP Address(End)',
-    localIpv4AddressStart: 'Local IPv4 Address(Start)',
-    localIpv4AddressEnd: 'Local IPv4 Address(End)',
-    localIpv6AddressStart: 'Local IPv6 Address(Start)',
-    localIpv6AddressEnd: 'Local IPv6 Address(End)',
-    protocol: 'Protocol',
-    comment: 'Comment',
-    placeholder: 'Please Enter the value',
-    add: 'Add',
-    currentBlacklistFilterTable: 'Current Blacklist Filter Table',
-    currentWhitelistFilterTable: 'Current Whitelist Filter Table',
-    number: 'Number',
-    active: 'Active',
-    noEntries: 'No entries'
-  },
-
-  generalMacFiltering: {
-    enableMacFiltering: 'Enable MAC Filtering',
-    filterMode: 'Filter Mode',
-    blacklist: 'Blacklist',
-    whitelist: 'Whitelist',
-    sourceMacAddress: 'Source MAC Address',
-    comment: 'Comment',
-    macPlaceholder: '11:22:33:44:55:66',
-    commentPlaceholder: 'Please Enter the value',
-    add: 'Add',
-    currentBlacklistFilterTable: 'Current Blacklist Filter Table',
-    currentWhitelistFilterTable: 'Current Whitelist Filter Table',
-    number: 'Number',
-    active: 'Active',
-    noEntries: 'No entries',
-    emptyMacError: 'MAC address cannot be empty',
-    invalidMacFormat: 'Invalid MAC address format',
-    duplicateMacError: 'This MAC address already exists'
-  },
-
-  // Application
-  xperienceControl: {
-    title: 'XperienceControl',
-    tagline: 'XGiga Carrier Grade SpeedTest',
-    poweredBy: 'Powered by Streambow',
-    description: 'Click the button below to start a speed test.',
-    startTest: 'Start Speed Test',
-    downloadSpeed: 'Download Speed',
-    uploadSpeed: 'Upload Speed',
-    pingInfo: 'Ping Info',
-    mbps: 'Mbps',
-    ms: 'ms',
-    packetLoss: 'Packet Loss',
-    minEchoTime: 'Min Echo Time',
-    meanEchoTime: 'Mean Echo Time',
-    maxEchoTime: 'Max Echo Time',
-    testFailed: 'Speedtest failed. Please try again.',
-    testing: 'Testing...'
-  },
-
-  upnp: {
-    title: 'UPnP IGD',
-    enable: 'UPnP IGD Enable',
-    interfaceSelection: 'Interface Selection',
-    apply: 'Apply',
-    loadError: 'Failed to load UPnP IGD settings',
-    updateError: 'Failed to update UPnP IGD settings',
-    serviceList: 'UPnP Service List',
-    totalClients: 'Total Clients',
-    refresh: 'Refresh',
-    id: 'ID',
-    serviceDescription: 'Service Description',
-    externalPort: 'External Port',
-    protocol: 'Protocol',
-    internalIpAddress: 'Internal IP Address',
-    internalPort: 'Internal Port',
-    noServices: 'No active services'
-  },
-
-  // Management/System
-  account: {
-    title: 'Account Management',
-    oldPassword: 'Old Password',
-    newPassword: 'New Password',
-    confirmPassword: 'Confirm Password',
-    passwordPlaceholder: 'Please Enter the value',
-    infoMessage:
-      'Use the fields below to enter up to {maxLength} characters and click "Apply" to change or create the password.',
-    noteMessage: 'Note: Password cannot contain a space.',
-    errorFetchSettings: 'Failed to fetch account settings',
-    errorAllFieldsRequired: 'All fields are required',
-    errorPasswordSpace: 'Password cannot contain a space',
-    errorPasswordLength: 'Password cannot exceed {maxLength} characters',
-    errorPasswordMismatch: 'New password and confirm password do not match',
-    errorUpdateFailed: 'Failed to update password',
-    successUpdate: 'Password updated successfully'
-  },
-
   ntp: {
     title: 'NTP',
     currentTime: 'Current Time',
@@ -804,7 +586,52 @@ const translations = {
     apply: 'Apply',
     placeholder: 'Please Enter the value'
   },
-
+  ssh: {
+    title: 'SSH',
+    serverManagement: 'SSH Server Management',
+    publicKeyManagement: 'Public Key Management',
+    currentSessions: 'Current Sessions',
+    addServer: 'Add Server',
+    editServer: 'Edit Server',
+    id: 'ID',
+    interface: 'Interface',
+    status: 'Status',
+    port: 'Port',
+    autoDisableServer: 'Auto Disable Server',
+    connectionTimeout: 'Connection Timeout',
+    keepAliveMessage: 'KeepAlive Message',
+    ipv4Prefix: 'IPv4 Prefix',
+    ipv6Prefix: 'IPv6 Prefix',
+    loginWithPassword: 'Login with Password',
+    rootLogin: 'Root Login',
+    rootLoginWithPassword: 'Root Login with Password',
+    enabled: 'Enabled',
+    disabled: 'Disabled',
+    action: 'Action',
+    enable: 'Enable SSH Server',
+    allowPasswordLogin: 'Allow Password Login',
+    allowRootLogin: 'Allow Root Login',
+    allowAllIPv4: 'Allow All IPv4',
+    allowAllIPv6: 'Allow All IPv6',
+    maxAuthTries: 'Maximum Authentication Tries',
+    idleTimeout: 'Idle Timeout (seconds)',
+    confirmDelete: 'Are you sure you want to delete this SSH server?',
+    comment: 'Comment',
+    publicKey: 'Public Key',
+    select: 'Select',
+    clickToView: 'Click to View',
+    key: 'Public Key',
+    viewKey: 'View Key',
+    newSshKey: 'New SSH Key',
+    enterNewSshKey: 'Enter new SSH key...',
+    confirmDeleteKey: 'Are you sure you want to delete this SSH key?',
+    user: 'User',
+    clientAddress: 'Client Address',
+    clientPort: 'Client Port',
+    serverId: 'Server ID',
+    serverPort: 'Server Port',
+    algorithm: 'Algorithm'
+  },
   device: {
     title: 'Device Management',
     tr069Config: 'TR-069 Configuration',
@@ -841,14 +668,6 @@ const translations = {
     maxControllersReached: 'Maximum number of controllers (5) reached',
     controller: 'Controller (MQTT)'
   },
-
-  settings: {
-    title: 'Settings',
-    reset: 'Reset to Default',
-    backup: 'Backup/Restore',
-    update: 'Update Software'
-  },
-
   diagnostics: {
     title: 'Diagnostics Tools',
     ping: 'Ping',
@@ -887,7 +706,6 @@ const translations = {
     errorInvalidHost: 'Invalid host specified',
     errorResolveFailed: 'Failed to resolve hostname'
   },
-
   firmware: {
     title: 'Upgrade Firmware',
     firmwareBank: 'Firmware Bank',
@@ -910,24 +728,19 @@ const translations = {
     rebootWarning: 'Device will reboot after activation.',
     upgradeFail: 'Firmware Upgrade Failed'
   },
-
   reset: {
     title: 'Device Reset',
     restartTitle: 'Restart Device',
-    restartDescription:
-      'Restart the device. This will temporarily disconnect all users and connections. The device will be unavailable during the restart process.',
+    restartDescription: 'Restart the device. This will temporarily disconnect all users and connections. The device will be unavailable during the restart process.',
     restartButton: 'Restart',
     restartConfirm: 'Are you sure you want to restart the device?',
     factoryTitle: 'Factory Reset',
-    factoryDescription:
-      'Reset the device to factory default settings. This will erase all configuration settings and restore the device to its original state.',
+    factoryDescription: 'Reset the device to factory default settings. This will erase all configuration settings and restore the device to its original state.',
     factoryButton: 'Factory Reset',
-    factoryConfirm:
-      'Are you sure you want to reset the device to factory settings? All configuration will be lost.',
+    factoryConfirm: 'Are you sure you want to reset the device to factory settings? All configuration will be lost.',
     countdown: 'Device will restart in {seconds} seconds...',
     success: 'Command sent successfully'
   },
-
   backup: {
     title: 'Backup & Restore',
     backupTitle: 'Backup',
@@ -942,8 +755,42 @@ const translations = {
     restoreButton: 'Restore',
     processing: 'Processing...'
   },
-
-  // IoT
+  xperienceControl: {
+    title: 'XperienceControl',
+    tagline: "XGiga Carrier Grade SpeedTest",
+    poweredBy: "Powered by Streambow",
+    description: 'Click the button below to start a speed test.',
+    startTest: 'Start Speed Test',
+    downloadSpeed: 'Download Speed',
+    uploadSpeed: 'Upload Speed',
+    pingInfo: 'Ping Info',
+    mbps: 'Mbps',
+    ms: 'ms',
+    packetLoss: 'Packet Loss',
+    minEchoTime: 'Min Echo Time',
+    meanEchoTime: 'Mean Echo Time',
+    maxEchoTime: 'Max Echo Time',
+    testFailed: 'Speedtest failed. Please try again.',
+    testing: 'Testing...'
+  },
+  upnp: {
+    title: 'UPnP IGD',
+    enable: 'UPnP IGD Enable',
+    interfaceSelection: 'Interface Selection',
+    apply: 'Apply',
+    loadError: 'Failed to load UPnP IGD settings',
+    updateError: 'Failed to update UPnP IGD settings',
+    serviceList: 'UPnP Service List',
+    totalClients: 'Total Clients',
+    refresh: 'Refresh',
+    id: 'ID',
+    serviceDescription: 'Service Description',
+    externalPort: 'External Port',
+    protocol: 'Protocol',
+    internalIpAddress: 'Internal IP Address',
+    internalPort: 'Internal Port',
+    noServices: 'No active services'
+  },
   thread: {
     title: 'Thread',
     status: 'Status',
@@ -1024,17 +871,13 @@ const translations = {
     refresh: 'Refresh',
     type: 'Type'
   },
-
   matter: {
     title: 'Matter',
-    description:
-      'Matter is a new smart home standard that aims to simplify development for manufacturers and increase compatibility for consumers.',
+    description: 'Matter is a new smart home standard that aims to simplify development for manufacturers and increase compatibility for consumers.',
     openDashboard: 'Open Matter Dashboard',
     dashboardDescription: 'Click the button below to open the Matter Dashboard in a new window.',
     dashboardPort: 'The Matter Dashboard is available on port 8889.'
   },
-
-  // Auth/Wizard
   login: {
     title: 'Login',
     username: 'Username',
@@ -1042,11 +885,9 @@ const translations = {
     submit: 'Login',
     error: 'Invalid username or password'
   },
-
   wizard: {
     completeTitle: 'Finish!',
-    message:
-      'Once setup is complete and the Internet LED on your router is solid blue, you can join your new Wi-Fi network (SSID: {ssid}) with the saved password.',
+    message: 'Once setup is complete and the Internet LED on your router is solid blue, you can join your new Wi-Fi network (SSID: {ssid}) with the saved password.',
     goToDashboard: 'Go to Dashboard',
     agentCompleteTitle: 'Finish!',
     instruction1: 'Wait until the LED stops blinking and turns solid blue.',
@@ -1054,8 +895,7 @@ const translations = {
     finishButton: 'Finish Setup',
     redirecting: 'Redirecting...',
     adminPasswordTitle: 'Admin Username & Password',
-    adminPasswordSubtitle:
-      "For stronger security, please change the admin username and password to prevent unauthorized access to your device's configuration page.",
+    adminPasswordSubtitle: 'For stronger security, please change the admin username and password to prevent unauthorized access to your device\'s configuration page.',
     username: 'Admin Username',
     usernamePlaceholder: 'Enter username',
     password: 'Password',
@@ -1079,24 +919,19 @@ const translations = {
     router: 'ROUTER',
     clientDevice: 'CLIENT DEVICE',
     step1Title: 'Connect to modem',
-    step1Description:
-      "Plug one end of the Ethernet cable into the modem's Ethernet port and the other end into the WAN port of your router.",
+    step1Description: 'Plug one end of the Ethernet cable into the modem\'s Ethernet port and the other end into the WAN port of your router.',
     step2Title: 'Restart your modem',
     step2Description: 'Wait until your modem finishes rebooting, then click Next.',
     wifiTitle: 'Create Your Wi-Fi Network',
     wifiSubtitle: 'Name your Wi-Fi and set a password to protect your network.',
     smartConnect: 'Smart Connect',
-    smartConnectTooltip:
-      'When Smart Connect is enabled, all bands (2.4GHz, 5GHz and 6GHz) share one Wi-Fi name and your client devices will join the best band automatically. You can disable Smart Connect if you’d like to set up each band (2.4GHz, 5GHz, 6GHz) separately.',
+    smartConnectTooltip: 'When Smart Connect is enabled, all bands (2.4GHz, 5GHz and 6GHz) share one Wi-Fi name and your client devices will join the best band automatically. You can disable Smart Connect if you’d like to set up each band (2.4GHz, 5GHz, 6GHz) separately.',
     mloNetwork: 'MLO Network',
-    mloTooltip:
-      'Multi-Link Operation (MLO) enables Wi-Fi 7 devices to connect across 2.4, 5, and 6 GHz bands at the same time—delivering faster speeds, lower latency, and greater reliability for VR/AR, gaming, remote work, and cloud computing.',
+    mloTooltip: 'Multi-Link Operation (MLO) enables Wi-Fi 7 devices to connect across 2.4, 5, and 6 GHz bands at the same time—delivering faster speeds, lower latency, and greater reliability for VR/AR, gaming, remote work, and cloud computing.',
     psc: 'PSC',
-    pscTooltip:
-      'Preferred Scanning Channel (PSC) is a set of prioritized 6 GHz channels that help Wi-Fi 6E/7 devices connect faster and more reliably by reducing scanning time and avoiding interference.',
+    pscTooltip: 'Preferred Scanning Channel (PSC) is a set of prioritized 6 GHz channels that help Wi-Fi 6E/7 devices connect faster and more reliably by reducing scanning time and avoiding interference.',
     pmf: 'PMF',
-    pmfTooltip:
-      'Protected Management Frames (PMF) secures Wi-Fi by encrypting critical management frames, blocking forged attacks that could disconnect users, and ensuring stable, private connections.',
+    pmfTooltip: 'Protected Management Frames (PMF) secures Wi-Fi by encrypting critical management frames, blocking forged attacks that could disconnect users, and ensuring stable, private connections.',
     agentSetupTitle: 'Get Your Device Ready',
     agentSetupSubtitle: 'Easily add your agent device and get online in just a few steps.',
     agentSetupViaWps: 'Setup via WPS',
@@ -1104,11 +939,9 @@ const translations = {
     agentStep1Title: 'Check your main router',
     agentStep1Description: 'Make sure your main router has Smart Mesh enabled and is connected to the Internet.',
     agentStep2Title: 'Press WPS buttons',
-    agentStep2Description:
-      'Press and hold the WPS buttons on both your main router and agent device for 2–3 seconds. The LED should start blinking.',
+    agentStep2Description: 'Press and hold the WPS buttons on both your main router and agent device for 2–3 seconds. The LED should start blinking.',
     agentStep2EthernetTitle: 'Connect the main router and the agent device',
-    agentStep2EthernetDescription:
-      'Plug the Ethernet cable into the LAN port of your router and into the LAN port of your agent device.',
+    agentStep2EthernetDescription: 'Plug the Ethernet cable into the LAN port of your router and into the LAN port of your agent device.',
     agentStep3Title: 'Waiting for setup to complete',
     agentStep3Description: 'And then click next.',
     processingTitle: 'Setting Up Your Device',
@@ -1116,28 +949,26 @@ const translations = {
     connectingMessage: 'Connecting to network...',
     connectionEstablished: 'Connection established. Completing setup...',
     connectionFailed: 'Connection failed. Retrying...',
-    timeoutMessage:
-      'If the setup is not completed within 120 seconds, you will be redirected back to the setup page.',
+    timeoutMessage: 'If the setup is not completed within 120 seconds, you will be redirected back to the setup page.',
     timeoutIn: 'Timeout in:',
     applyingTitle: 'Applying Settings...',
-    applyingMessage: "We're rebooting your router and applying your settings.",
-    applyingWarning: "Please don't turn off or unplug it.",
+    applyingMessage: 'We\'re rebooting your router and applying your settings.',
+    applyingWarning: 'Please don\'t turn off or unplug it.',
     meshTitle: 'Smart Mesh',
     meshSubtitle: 'Create a Smart Mesh network for seamless Wi-Fi coverage across your home with simple central management.',
     meshInfoTitle: 'What is Smart Mesh?',
-    meshInfoDescription:
-      'Smart Mesh allows multiple routers to work together as a single network, providing seamless coverage throughout your home or office. Devices automatically connect to the strongest signal.',
+    meshInfoDescription: 'Smart Mesh allows multiple routers to work together as a single network, providing seamless coverage throughout your home or office. Devices automatically connect to the strongest signal.',
     meshBenefitsTitle: 'Benefits:',
     meshBenefit1: 'Seamless roaming between access points',
     meshBenefit2: 'Extended wireless coverage',
     meshBenefit3: 'Automatic device steering to optimal access point',
     meshBenefit4: 'Centralized management',
-    modeSelectTitle: "Let's Get Started",
+    modeSelectTitle: 'Let\'s Get Started',
     modeSelectSubtitle: 'How would you like to set up your device?',
     routerModeTitle: 'Router Mode',
-    routerModeDescription: "I don't have a main router, and I'm going to set up a new wireless network with a modem.",
+    routerModeDescription: 'I don\'t have a main router, and I\'m going to set up a new wireless network with a modem.',
     agentModeTitle: 'Agent Mode',
-    agentModeDescription: "I'm adding an Agent device to the existing Smart Mesh Network.",
+    agentModeDescription: 'I\'m adding an Agent device to the existing Smart Mesh Network.',
     reviewTitle: 'Review Your Settings',
     reviewSubtitle: 'Please review your configuration before applying.',
     reviewDeviceMode: 'Device Mode',
@@ -1145,8 +976,7 @@ const translations = {
     reviewSmartMesh: 'Smart Mesh',
     reviewWifiConfiguration: 'Wi-Fi Configuration',
     reviewAdministrator: 'Administrator Account',
-    reviewApplyMessage:
-      'After applying these settings, your device will configure itself and may reboot. This process may take a few minutes.',
+    reviewApplyMessage: 'After applying these settings, your device will configure itself and may reboot. This process may take a few minutes.',
     reviewMode: 'Mode:',
     reviewConnectionType: 'Connection Type:',
     reviewStatus: 'Status:',
@@ -1183,13 +1013,6 @@ const translations = {
     band6ghz: '6GHz Wireless Network',
     enable6ghz: 'Enable 6GHz Wi-Fi'
   },
-
-  // Common
-  header: {
-    account: 'Account',
-    logout: 'Logout'
-  },
-
   common: {
     save: 'Save',
     cancel: 'Cancel',
@@ -1218,7 +1041,6 @@ const translations = {
     underDevelopmentDesc: 'This page is currently under development and will be available soon.',
     placeholder: 'Please Enter the value'
   },
-
   logs: {
     title: 'System Logs',
     filters: 'Log Filters',
@@ -1250,6 +1072,158 @@ const translations = {
     daysAgo: '{days}d ago',
     startAutoRefresh: 'Start Auto Refresh',
     pauseAutoRefresh: 'Pause Auto Refresh'
+  },
+  logStatus: {
+    title: 'System Log',
+    categories: 'Categories',
+    severity: 'Severity',
+    limit: 'Limit',
+    search: 'Search Keyword',
+    searchPlaceholder: 'Enter keyword to search...',
+    searchBtn: 'Search',
+    clearBtn: 'Clear',
+    exportBtn: 'Export Logs',
+    exporting: 'Exporting...',
+    source: 'Source',
+    matchCount: 'Match Count',
+    showing: 'Showing',
+    moreAvailable: 'More logs available on server',
+    all: 'All',
+    dhcp: 'DHCP',
+    cwmpd: 'CWMPD',
+    wifi: 'WiFi',
+    wan: 'WAN',
+    lan: 'LAN',
+    system: 'System',
+    kernel: 'Kernel',
+    firewall: 'Firewall',
+    lcm: 'LCM'
+  },
+  account: {
+    title: 'Account Management',
+    oldPassword: 'Old Password',
+    newPassword: 'New Password',
+    confirmPassword: 'Confirm Password',
+    passwordPlaceholder: 'Please Enter the value',
+    infoMessage: 'Use the fields below to enter up to {maxLength} characters and click "Apply" to change or create the password.',
+    noteMessage: 'Note: Password cannot contain a space.',
+    errorFetchSettings: 'Failed to fetch account settings',
+    errorAllFieldsRequired: 'All fields are required',
+    errorPasswordSpace: 'Password cannot contain a space',
+    errorPasswordLength: 'Password cannot exceed {maxLength} characters',
+    errorPasswordMismatch: 'New password and confirm password do not match',
+    errorUpdateFailed: 'Failed to update password',
+    successUpdate: 'Password updated successfully'
+  },
+  dualImage: {
+    title: 'Dual Image',
+    currentBootPartition: 'Current Boot Partition',
+    partitionInformation: 'Partition Information',
+    bootPartition: 'Boot Partition',
+    version: 'Version'
+  },
+  settings: {
+    title: 'Settings',
+    reset: 'Reset to Default',
+    backup: 'Backup/Restore',
+    update: 'Update Software'
+  },
+  qos: {
+    title: 'QoS Configuration',
+    bandwidthTab: 'QoS Bandwidth',
+    ruleTab: 'QoS Rule',
+    enableQos: 'Enable QoS',
+    downloadBandwidth: 'Download Bandwidth',
+    uploadBandwidth: 'Upload Bandwidth',
+    priority: 'Priority',
+    minimumReserve: 'Minimum reserve (%)',
+    maximumAllowed: 'Maximum allowed (%)',
+    actualSpeedRange: 'Actual speed range',
+    whatThisDoes: 'What this does',
+    high: 'High',
+    medium: 'Medium',
+    low: 'Low',
+    lowLatency: 'Low-latency',
+    atLeast: 'At least',
+    upTo: 'Up to',
+    goesFirst: 'Goes first.',
+    normalLane: 'The normal lane.',
+    yieldsWhenBusy: 'Yields when busy.',
+    lowDelayFirst: 'Low delay first.',
+    formulaNote1: '$min = $Upload_Bandwidth x $Minimum_reserve',
+    formulaNote2: '$max = $Upload_Bandwidth x $Maximum_allowed',
+    validation1: 'Minimum reserve <= Maximum allowed',
+    validation2: 'Minimum reserve cannot exceed 100 %',
+    qosRuleLists: 'QoS rule lists',
+    addRule: 'Add rule',
+    no: 'No.',
+    type: 'Type',
+    name: 'Name',
+    description: 'Description',
+    action: 'Action',
+    application: 'Application',
+    device: 'Device',
+    addQosRule: 'Add QoS rule',
+    editRule: 'Edit QoS rule',
+    applicationType: 'Application Type',
+    applicationName: 'Application Name',
+    port: 'Port',
+    protocol: 'Protocol',
+    macAddress: 'MAC Address',
+    portPlaceholder: '80, 443, 8000-8005',
+    portHint: 'Enter ports as a list. Use commas to separate items and a dash for ranges. Examples: 80, 443, 8000-8005',
+    ruleNote1: 'You can drag and drop to change order',
+    ruleNote2: 'Apply will send the changes',
+    ruleNote3: 'Cancel will discard changes',
+    priorityRequired: 'Priority is required',
+    applicationNameRequired: 'Application name is required',
+    portRequired: 'Port is required',
+    protocolRequired: 'Protocol is required',
+    deviceRequired: 'Device is required',
+    confirmDelete: 'Are you sure you want to delete this rule?'
+  },
+  ipFiltering: {
+    enableIpFiltering: 'Enable IP Filtering',
+    ipFilteringMode: 'IP Filtering Mode',
+    blacklist: 'Blacklist',
+    whitelist: 'Whitelist',
+    filterMode: 'Filter Mode',
+    enableIpv4: 'Enable IPv4',
+    enableIpv6: 'Enable IPv6',
+    localIpAddressStart: 'Local IP Address(Start)',
+    localIpAddressEnd: 'Local IP Address(End)',
+    localIpv4AddressStart: 'Local IPv4 Address(Start)',
+    localIpv4AddressEnd: 'Local IPv4 Address(End)',
+    localIpv6AddressStart: 'Local IPv6 Address(Start)',
+    localIpv6AddressEnd: 'Local IPv6 Address(End)',
+    protocol: 'Protocol',
+    comment: 'Comment',
+    placeholder: 'Please Enter the value',
+    add: 'Add',
+    currentBlacklistFilterTable: 'Current Blacklist Filter Table',
+    currentWhitelistFilterTable: 'Current Whitelist Filter Table',
+    number: 'Number',
+    active: 'Active',
+    noEntries: 'No entries'
+  },
+  generalMacFiltering: {
+    enableMacFiltering: 'Enable MAC Filtering',
+    filterMode: 'Filter Mode',
+    blacklist: 'Blacklist',
+    whitelist: 'Whitelist',
+    sourceMacAddress: 'Source MAC Address',
+    comment: 'Comment',
+    macPlaceholder: '11:22:33:44:55:66',
+    commentPlaceholder: 'Please Enter the value',
+    add: 'Add',
+    currentBlacklistFilterTable: 'Current Blacklist Filter Table',
+    currentWhitelistFilterTable: 'Current Whitelist Filter Table',
+    number: 'Number',
+    active: 'Active',
+    noEntries: 'No entries',
+    emptyMacError: 'MAC address cannot be empty',
+    invalidMacFormat: 'Invalid MAC address format',
+    duplicateMacError: 'This MAC address already exists'
   }
 };
 
