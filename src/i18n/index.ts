@@ -6,6 +6,7 @@ import de from './locales/de';
 import zh_TW from './locales/zh-TW';
 import zh_CN from './locales/zh-CN';
 import ko from './locales/ko';
+import type { MessageSchema } from './locales/types';
 
 const messages = {
   en,
@@ -17,10 +18,10 @@ const messages = {
   ko
 };
 
-export const i18n = createI18n({
+export const i18n = createI18n<[MessageSchema], 'en' | 'fr' | 'ja' | 'de' | 'zh_TW' | 'zh_CN' | 'ko'>({
   legacy: false,
   locale: 'en',
   fallbackLocale: 'en',
-  messages,
+  messages: messages as any, // messages object conforms to MessageSchema per-locale; cast is acceptable for runtime object map
   availableLocales: ['en', 'fr', 'ja', 'de', 'zh_TW', 'zh_CN', 'ko']
 });

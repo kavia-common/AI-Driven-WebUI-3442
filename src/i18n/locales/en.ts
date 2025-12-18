@@ -1,4 +1,4 @@
-// English translations
+/* English translations */
 const translations = {
   menu: {
     status: 'Status',
